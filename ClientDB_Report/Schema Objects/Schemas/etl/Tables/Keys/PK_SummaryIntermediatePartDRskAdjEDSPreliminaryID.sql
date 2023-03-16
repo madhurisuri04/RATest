@@ -1,0 +1,5 @@
+ALTER TABLE [etl].[SummaryIntermediatePartDRskAdjEDSPreliminary] ADD  CONSTRAINT [PK_SummaryIntermediatePartDRskAdjEDSPreliminaryID] PRIMARY KEY CLUSTERED 
+(
+[SummaryInterPartDRskAdjEDSPreliminaryID] ASC
+)WITH (PAD_INDEX = ON, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = ON, IGNORE_DUP_KEY = OFF, ONLINE = ON, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON ) 
+

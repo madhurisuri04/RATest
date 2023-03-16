@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dve].[_LOBCode] ADD  CONSTRAINT [DF__LOBCode_EnableEdits]  DEFAULT ((1)) FOR [EnableEdits]

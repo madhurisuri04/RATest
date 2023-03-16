@@ -1,0 +1,56 @@
+CREATE TABLE dbo.CNRAPSImportDetail_rollup (
+	CNRAPSImportDetail_rollupID		BIGINT IDENTITY(1, 1)	NOT NULL,
+	PlanIdentifier					SMALLINT				NULL,
+	 CNRAPSImportDetailID			BIGINT					NOT NULL
+	,CNRAPSImportID					INT						NOT NULL
+	,CNRAPSStatusID					SMALLINT				NULL 
+	,PLAN_ID						VARCHAR(5)				NULL
+	,CLAIM_CONTROL_NUMBER			VARCHAR(100)			NULL
+	,HICN							VARCHAR(25)				NULL
+	,DATE_OF_SERVICE_START			SMALLDATETIME			NULL
+	,DATE_OF_SERVICE_END			SMALLDATETIME			NULL
+	,PROVIDER_TYPE					VARCHAR(5)				NULL
+	,DIAG1							VARCHAR(10)				NULL
+	,DIAG2							VARCHAR(10)				NULL
+	,DIAG3							VARCHAR(10)				NULL
+	,DIAG4							VARCHAR(10)				NULL
+	,DIAG5							VARCHAR(10)				NULL
+	,DIAG6							VARCHAR(10)				NULL
+	,DIAG7							VARCHAR(10)				NULL
+	,DIAG8							VARCHAR(10)				NULL
+	,DIAG9							VARCHAR(10)				NULL
+	,DIAG10							VARCHAR(10)				NULL
+	,DELDIAG1						CHAR(1)					NULL
+	,DELDIAG2						CHAR(1)					NULL
+	,DELDIAG3						CHAR(1)					NULL
+	,DELDIAG4						CHAR(1)					NULL
+	,DELDIAG5						CHAR(1)					NULL
+	,DELDIAG6						CHAR(1)					NULL
+	,DELDIAG7						CHAR(1)					NULL
+	,DELDIAG8						CHAR(1)					NULL
+	,DELDIAG9						CHAR(1)					NULL
+	,DELDIAG10						CHAR(1)					NULL
+	,ICD							VARCHAR(2)				NULL
+	,RAC1							CHAR(1)					NULL
+	,RAC2							CHAR(1)					NULL
+	,RAC3							CHAR(1)					NULL
+	,RAC4							CHAR(1)					NULL
+	,RAC5							CHAR(1)					NULL
+	,RAC6							CHAR(1)					NULL
+	,RAC7							CHAR(1)					NULL
+	,RAC8							CHAR(1)					NULL
+	,RAC9							CHAR(1)					NULL
+	,RAC10							CHAR(1)					NULL
+	,USER_UPLOADED_BY				INT						NULL
+	,[SOURCE]						VARCHAR(50)				NULL
+	,IMPORTED_DATE					SMALLDATETIME			NULL
+	,EXPORTED_FILEID				VARCHAR(10)				NULL
+	,Source_ID						INT						NULL
+	,Provider_ID					VARCHAR(40)				NULL
+	,Image_ID						INT						NULL
+	,Date_Of_Notification			SMALLDATETIME			NULL
+	,In_Cluster						INT						NULL
+	,MemberIDReceived				VARCHAR(12)				NULL
+	,SPMRID							INT						NULL
+	,IsProcessed					BIT						NOT NULL
+	);

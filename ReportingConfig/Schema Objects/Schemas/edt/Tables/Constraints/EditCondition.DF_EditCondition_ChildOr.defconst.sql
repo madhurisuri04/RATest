@@ -1,0 +1,1 @@
+﻿ALTER TABLE [edt].[EditCondition] ADD  CONSTRAINT [DF_EditCondition_ChildOr]  DEFAULT ((0)) FOR [TrueOnANYChildCondition]

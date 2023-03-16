@@ -1,0 +1,1 @@
+﻿ALTER TABLE Valuation.ConfigClientMain ADD  CONSTRAINT [DF_ConfigClientMain_Added]  DEFAULT (GETDATE()) FOR [Added]

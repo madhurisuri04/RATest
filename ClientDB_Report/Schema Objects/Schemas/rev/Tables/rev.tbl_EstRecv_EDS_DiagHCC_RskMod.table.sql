@@ -1,0 +1,18 @@
+CREATE TABLE [rev].[tbl_EstRecv_EDS_DiagHCC_RskMod] (
+    [EDS_DiagHCC_rollupID] [INT] NOT NULL
+  , [PlanIdentifier] [SMALLINT] NULL
+  , [ProcessedBy] [SMALLDATETIME] NULL
+  , [DiagnosisCode] [VARCHAR](7) NULL
+  , [HICN] [VARCHAR](25) NULL
+  , [PatientControlNumber] [VARCHAR](40) NULL
+  , [SeqNumber] [VARCHAR](7) NULL
+  , [ThruDate] [SMALLDATETIME] NULL
+  , [Deleted] [VARCHAR](1) NULL
+  , [RAFT] [VARCHAR](2) NULL
+  , [Payment_year] [INT] NULL
+  , [HCC] [VARCHAR](50) NULL
+  , [HCC_Number] [INT] NULL
+  , [FileID] [VARCHAR](18) NULL
+  , [Source_Id] [INT] NULL
+  , [Provider_Id] [VARCHAR](40) NULL
+  , [RAC] [VARCHAR](1) NULL)

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="2ccd736a-8c75-4752-9c21-3f7e32ef49e1" ChangeDateTime="11/14/2017 15:57:23">
+    <Property Name="ElementName" Value="[rev].[IntermediateEDSPartD].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[rev].[IntermediateEDSPartD]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IntermediateEDSPartDId" />
+  </Operation>
+</Operations>

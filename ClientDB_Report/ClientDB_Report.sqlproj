@@ -1,0 +1,2617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+    <PostConversionRemoveFromScc>
+    </PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <PostConversionCheckOutFromScc>
+    </PostConversionCheckOutFromScc>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>ClientDB_Report</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>ClientDB_Report</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.1</PreviousProjectVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56de4c7c-70f0-4dbb-8072-a1454b50a80d}</ProjectGuid>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <TargetLanguage>CS</TargetLanguage>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <AnsiNullDefault>False</AnsiNullDefault>
+    <AnsiNulls>True</AnsiNulls>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>False</AnsiWarnings>
+    <ArithAbort>False</ArithAbort>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <CompatibilityMode>100</CompatibilityMode>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DatabaseState>ONLINE</DatabaseState>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <EnableFullTextSearch>False</EnableFullTextSearch>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <PageVerify>CHECKSUM</PageVerify>
+    <Parameterization>SIMPLE</Parameterization>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <Recovery>SIMPLE</Recovery>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <ServiceBrokerOption>DisableBroker</ServiceBrokerOption>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <TornPageDetection>False</TornPageDetection>
+    <Trustworthy>False</Trustworthy>
+    <UpdateOptions>READ_WRITE</UpdateOptions>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>NewEnglandHealth_Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Model|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>_Model_ClientDB_Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <OutputPath>.\sql\Model\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LocalDev|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>NewEnglandHealth_Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <OutputPath>.\sql\LocalDev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'TRN|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>NewEnglandHealth_Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <OutputPath>.\sql\TRN\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'TEST|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>NewEnglandHealth_Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <OutputPath>.\sql\TEST\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UAT|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <OutputPath>.\sql\UAT\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Dev|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>NewEnglandHealth_Report</TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <OutputPath>.\sql\Dev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(TeamBuildOutDir) != '' ">
+    <OutputPath>$(TeamBuildOutDir)\$(SolutionName)\$(MSBuildProjectName)</OutputPath>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Schema Objects\Schemas\" />
+    <Folder Include="Schema Objects\Schemas\dbo\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\Queues\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Statistics\" />
+    <Folder Include="Schema Objects\Database Level Objects\" />
+    <Folder Include="Schema Objects\Database Level Objects\Assemblies\" />
+    <Folder Include="Schema Objects\Database Level Objects\Database Triggers\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Users\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Certificates\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Asymmetric Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Master Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Signatures\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Symmetric Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Encryption Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Audit Specification\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Application Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Database Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Broker Priorities\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Contracts\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Event Notifications\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Message Types\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Remote Service Binding\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Routes\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Services\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Stoplists\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Filegroups\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Files\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Catalogs\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Functions\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Schemes\" />
+    <Folder Include="Schema Objects\Schemas\etl\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\etl\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\etl\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\etl\Tables\" />
+    <Folder Include="Schema Objects\Schemas\etl\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\etl\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\etl\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\etl\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\etl\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\etl\Views\" />
+    <Folder Include="Schema Objects\Schemas\etl\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\etl\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\etl\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\eds" />
+    <Folder Include="Schema Objects\Schemas\eds\Tables" />
+    <Folder Include="Schema Objects\Schemas\rpt\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Tables\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Views\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\rpt\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\eds\Programmability" />
+    <Folder Include="Schema Objects\Schemas\Valuation" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Programmability" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Tables" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\Valuation\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\rev" />
+    <Folder Include="Schema Objects\Schemas\rev\Programmability" />
+    <Folder Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables" />
+    <Folder Include="Schema Objects\Schemas\rev\Views" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Rules" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Statistics" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\rev\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\hst" />
+    <Folder Include="Schema Objects\Schemas\out" />
+    <Folder Include="Schema Objects\Schemas\hst\Tables" />
+    <Folder Include="Schema Objects\Schemas\hst\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\out\Tables" />
+    <Folder Include="Schema Objects\Schemas\out\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\ref\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\ref\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\ref\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\ref\Tables\" />
+    <Folder Include="Schema Objects\Schemas\ref\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\ref\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\ref\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\ref\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\ref\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\ref\Views\" />
+    <Folder Include="Schema Objects\Schemas\ref\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\ref\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\ref\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\ssnri" />
+    <Folder Include="Schema Objects\Schemas\ssnri\Programmability" />
+    <Folder Include="Schema Objects\Schemas\ssnri\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\raps" />
+    <Folder Include="Schema Objects\Schemas\raps\Tables" />
+    <Folder Include="Schema Objects\Schemas\raps\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\raps\Programmability" />
+    <Folder Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\raps\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\out\Tables\Indexes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema Comparisons\GetFromClone.scmp">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Post-Deployment\eds_EncounterRAPSRollupStatus_Refresh.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Post-Deployment\TFS_17141_RADVMemberStatuses.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Post-Deployment\TFS_17141_RADVMemberRanks.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <Build Include="Permissions.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ETL_RADVMerge.proc.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RptClientPcnStrings.table.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RptClientPcnStrings.pk_RptClientPcnStrings_ID.pkey.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_RptClientPcnStrings.index.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_RptClientPcnStrings_LastUpdateDTM.index.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <None Include="Scripts\Post-Deployment\InsertPCNStringForNewHCC.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Post-Deployment\TFS_42305_Scott_Holland_lk_DCP_dates_RskAdj_PopulateTable.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Pre-Deployment\TFS_57342_Jim_Wilson_DropObsoleteTable_ClientReport.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Schema Objects\Schemas\etl\Tables\Keys\etl.EstRecvDemoCalc.PK_EstRecvDemoCalc.pk.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\out.schema.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\hst.schema.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevERCalc.proc.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevRiskScoreCalc.proc.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstReceivablesandRiskScores.proc.sql">
+      <SubType>NotInBuild</SubType>
+    </Build>
+    <None Include="Scripts\Post-Deployment\LoadExtract.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Post-Deployment\LoadExtractFile.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Scripts\Post-Deployment\LoadExtractStatus.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\MOR_rollup.PK_MOR_rollup.pkey.sql" />
+    <None Include="Scripts\Post-Deployment\TFS_75663_CWFDetails_update_source_verscend_to_cotiviti.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_mm_rs_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_master_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_file_upload_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_raps_submissions_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_cn_qa_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_hcc_prov_type_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_top_10_HCC_plan_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_top_10_HCC_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_raps_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_pdeq_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_pde_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_reconq_aging_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_reconq_discrepancy_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_reconq_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_mm_status_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_mm_retro_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_mm_ra_factor_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_mm_rs_range_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_mm_prem_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbt_cn_tracking_1.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_mm_rs_range_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_mm_prem_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_mm_rs_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_file_upload_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_raps_submissions_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_cn_qa_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_cn_tracking_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_hcc_prov_type_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_top_10_HCC_plan_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_top_10_HCC_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_raps_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_pdeq_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_pde_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_reconq_aging_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_reconq_discrepancy_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_reconq_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_mm_status_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_mm_retro_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbt_mm_ra_factor_1.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Service Broker\Routes\AutoCreatedLocal_1.route.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Functions\dbo.fn_AllClientDBsOnline.function.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CNCoreProject.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CNCoreLogic.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CNCoreCodingReviewLogic.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CNCoreCodingLogic.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_MORD_rollup_HICN_Paymo.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_MMR_rollup_HICN_PaymStart.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Member_Months_rollup_HICN_RskAdjAgeGrp.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Member_Months_rollup_HICN_RA_Factor_Type.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Member_Months_rollup_HICN_PaymStart.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_BIDS_rollup_Bid_year.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_RAPS_DiagHCC_rollup_HICN_PatientControlNumber.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_RAPS_DiagHCC_rollup_HICN_ThruDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_MOR_rollup_HICN_PayMo.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_Converted_MORD_Data_rollup_HICN_Payment_Month.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_Converted_MOR_Data_rollup_HICN_PayMonth.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_AltHICNXref_AltHICN_FinalHICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_Insert_dbo_vw_RAPS_DiagHCC_rollup.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_GetAllAltHICN.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_MORD_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_MMR_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Member_Months_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_BIDS_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_AltHICN_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RAPS_DiagHCC_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\MOR_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Converted_MORD_Data_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Converted_MOR_Data_rollup.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AltHICNXref.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Existing_Conditions_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_PDE_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Plan_Claims_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Member_Months_Plan_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Raps_Accepted_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_Insert_dbo_tbl_Member_months_plan_rollup.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_MemberDemographics_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\Raps_Accepted_rollup.PK_Raps_Accepted_rollup_Raps_Accepted_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Member_Months_Plan_rollup.PK_tbl_Member_Months_Plan_rollup_tbl_Member_Months_Plan_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Plan_Claims_rollup.PK_tbl_Plan_Claims_rollup_tbl_Plan_Claims_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_PDE_rollup.PK_tbl_PDE_rollup_tbl_PDE_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Existing_Conditions_rollup.tbl_Existing_Conditions_rollup_tbl_Existing_Conditions_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_MemberDemographics_rollup.tbl_MemberDemographics_rollup_tbl_MemberDemographics_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_PDE_rollup_HICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_PDE_rollp_DATE_OF_SERVICE.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Member_Months_Plan_rollup_HICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_MemberDemographics_rollup_HICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Existing_Conditions_rollup_HICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_Raps_Accepted_rollup_HICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Images_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Images_rollup_tbl_Images_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Images_rollup_HICN.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Images_rollup_ProviderID.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Plan_Membership_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Plan_Membership_rollup_tbl_Plan_Membership_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_Insert_dbo_tbl_Plan_Membership_rollup.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Plan_Membership_rollup_HICN_PCP_ID.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CNOperationsDashboard.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\lk_CohortTagDescription.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Cohort.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\CLIDX_tbl_Cohort_HICN_EffectiveDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ChartNavAttestationsYOS2012.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ChartNavAttestationsYOS2012History.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Triggers\ChartNavAttestationsYOS2012.ChartNavAttestationsYOS2012HistoryCreate.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Triggers\ChartNavAttestationsYOS2012.ChartNavAttestationsYOS2012HistoryDelete.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbo.lk_MemberMovedSubProjXWalk.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\TCC_tbl_MemberStatus.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AH_tbl_MemberStatus_HighRisk.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AH_tbl_MemberStatus_LowRisk.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AH_tbl_MemberStatus_MediumRisk.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AH_tbl_MemberStatus_NewMember.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\EMSI_tbl_MemberStatus.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\lk_CaseStatus_Category.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RADVMember.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RADVMemberDetail.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RADVMember.PK_RADVMember.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RADVMemberDetail.PK_RADVMemberDetail.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Transaction_Reply_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Transaction_Reply_rollup.pk_tbl_Transaction_Reply_rollup_tbl_Transaction_Reply_rollupID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbo.CWFDetails.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\dbo.CWFDetails.IX_CWFDetails_ProjectID.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\SSISCodingWorkflowDetailControl.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_EligibilityRecyclingCheck.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\EligibilityRecyclingCheck.table.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\etl.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\eds.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\idx_HICN_ServiceStartDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\eds\Tables\EncounterRapsRollupStatus.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\eds\Tables\EncounterLineDiagResponse.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\eds\Tables\EncounterRapsRollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\eds\Tables\EncounterRapsRollupDiagnosis.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\RADVMemberDetail.IX_RADVMemberDetail_NaturalKey.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_EstRecv_MMR_RAPS_MOR_Summary.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_Accepted_RAPS.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_DEL_HCC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_ModelSplits.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_Processby_RAPS_IDs.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_Processby_SeqNum.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_RAPS_Split.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_RiskFactorsRAPS.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_ThruDate_RAPS_IDs.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_ThruDate_SeqNum.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_Accepted_RAPS.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_DEL_HCC.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_ModelSplits.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_Processby_RAPS_IDs.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_Processby_SeqNum.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_RAPS_Split.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_RiskFactorsMOR.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_ThruDate_RAPS_IDs.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_ThruDate_SeqNum.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RADVMemberStatuses.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RADVMemberStatuses.PK_RADVMemberStatuses.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RADVMemberDetail.FK_RADVMemberDetail_RADVMemberStatuses.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RADVMemberSuspect.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RADVMemberSuspect.PK_RADVMemberSuspect.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_CNCoreCodingLogic_OrganizationID_LastUpdateDateTime_ImageStatusDescription.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RADVMemberRank.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RADVMemberRank.PK_RADVMemberRank_ID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_RADVFactorType.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_RADVMemberMonths.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_RADVRank.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_RADVStatusUpdates.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_RADVTotalValue.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_RADVBidAmount.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ProcessLog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\ProcessLog.PK_ProcessLogID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\ProcessLog.IXProcessLog_CreationDateTime.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\ProcessLog.IXProcessLog_ProcNameCreationDateTime.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\messenger.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_RAPS_Interactions.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_RAPS_DiagHCC_RskMod.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_EstRecv_RAPS_DiagHCC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_EstRecv_RAPS_DiagHCC.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Plan_Claims_rollup_End_Date.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\EstRecevDetailPopulateAllPlans.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\EstRecevDetailPopulateAllPlanBase.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\MOR2012_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_MOR2012_rollup_HICN_PayMo.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Functions\dbo.fnSplit.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_EstRecv_RAPS_DiagHCC.IDX_tbl_EstRecv_RAPS_DiagHCC.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_EstRecv_RAPS_DiagHCC_RskMod.IDX_tbl_EstRecv_RAPS_DiagHCC_RskMod.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_EstRecv_RAPS_DiagHCC_RskMod.IDXN_tbl_EstRecv_RAPS_DiagHCC_RskMod.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_EstRecv_RAPS_Interactions.IDX_tbl_EstRecv_RAPS_Interactions.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_EstRecv_RiskFactorsRAPS.IDX_tbl_EstRecv_RiskFactorsRAPS.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_EstRecv_RiskFactorsRAPS.idx_tbl_EstRecv_RiskFactorRAPS_Date.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\Valuation.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Valuation.NewHCCPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Valuation.NewHCCPartD.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.GetNewHCCPartD.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ValCTRSummary.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\RptTotal.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\RptSummaryTotalUnique.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\RptSummaryTotal.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\RptRetrospectiveValuationDetail.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\RptRetrospectiveValuation.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\RptPaymentDetail.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\FilteredAuditCWFDetail.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\FilteredAuditCNCompletedChart.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\DailyChartTracking.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ConfigSubProjectSubstringPattern.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ConfigSubProjectReviewName.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ConfigStaticParameters.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ConfigProjectIdList.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ConfigClientPlan.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\ConfigClientMain.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPMHAttestationFilteredAuditTotalsESRD.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPMHAttestationFilteredAuditHCCTotalsCI.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPMHAndAttestationTotalsESRD.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPMHAndAttestationHCCTotalsESRD.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPartDTotalsBySubProject.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPartDFilteredAuditTotals.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPartCTotalsBySubprojectAndModelYearESRD.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcPartCSubProjectModelYearCI.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcFilteredAuditsTotalForESRD.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\CalcFilteredAuditsTotalForCI.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessRun.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Indexes\Valuation.FilteredAuditCNCompletedChart.IX_FilteredAuditCNCompletedChart__ProcessRunId__ClientId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Indexes\Valuation.FilteredAuditCNCompletedChart.IX_FilteredAuditCNCompletedChart__AutoProcessRunId__SubProjectId__ClientId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Indexes\Valuation.DailyChartTracking.IX_DailyChartTracking__AutoProcessRunId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptRetrospectiveValuation.DF_RptRetrospectiveValuation_ProjectSortOrder.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptPaymentDetail.DF_RptPaymentDetail_ProjectSortOrder.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigSubProjectSubstringPattern.DF_ConfigSubProjectSubstringPattern_SubProjectSortOrder.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigSubProjectSubstringPattern.DF_ConfigSubProjectSubstringPattern_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigSubProjectSubstringPattern.DF_ConfigSubProjectSubstringPattern_Added.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigSubProjectReviewName.DF_ConfigSubProjectReviewName_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigSubProjectReviewName.DF_ConfigSubProjectReviewName_Added.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigClientPlan.DF_ConfigClientPlan_Priority.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigClientPlan.DF_ConfigClientPlan_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigClientPlan.DF_ConfigClientPlan_Added.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigClientMain.DF_ConfigClientMain_MaxWorkers.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigClientMain.DF_ConfigClientMain_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.ConfigClientMain.DF_ConfigClientMain_Added.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessRun.DF_AutoProcessRun_BDate.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptTotal.DF_RptTotal_ProjectSortOrder.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptSummaryTotalUnique.DF_RptSummaryTotalUnique_SummaryYear.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptSummaryTotalUnique.DF_RptSummaryTotalUnique_IsSummary.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptSummaryTotal.DF_RptSummaryTotal_SummaryYear.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptSummaryTotal.DF_RptSummaryTotal_IsSummary.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.RptRetrospectiveValuationDetail.DF_RptRetrospectiveValuationDetail_ProjectSortOrder.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigGetCalc.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigGetCTRSummary.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigGetDailyChartTracking.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigGetFilteredAuditDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigGetNewProjectSubProjectReviewName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateSubProjectIdAndFailureReason.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.AutoProcessRun.PK_ValuationAutoProcessRun.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcFilteredAuditsTotalForCI.PK_ValuationCalcFilteredAuditsTotalForCI.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcFilteredAuditsTotalForESRD.PK_ValuationCalcFilteredAuditsTotalForESRD.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPartCSubProjectModelYearCI.PK_ValuationCalcPartCSubProjectModelYearCI.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPartCTotalsBySubprojectAndModelYearESRD.PK_ValuationCalcPartCTotalsBySubprojectAndModelYearESRD.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPartDFilteredAuditTotals.PK_ValuationCalcPartDFilteredAuditTotals.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPartDTotalsBySubProject.PK_ValuationCalcPartDTotalsBySubProject.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPMHAndAttestationHCCTotalsESRD.PK_ValuationCalcPMHAndAttestationHCCTotalsESRD.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPMHAndAttestationTotalsESRD.PK_ValuationCalcPMHAndAttestationTotalsESRD.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPMHAttestationFilteredAuditHCCTotalsCI.PK_ValuationCalcPMHAttestationFilteredAuditHCCTotalsCI.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.CalcPMHAttestationFilteredAuditTotalsESRD.PK_ValuationCalcPMHAttestationFilteredAuditTotalsESRD.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ConfigClientMain.PK_ValuationConfigClientMain.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ConfigClientPlan.PK_ValuationConfigClientPlan.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ConfigStaticParameters.PK_ValuationConfigStaticParameters.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ConfigSubProjectReviewName.PK_ValuationSubProjectReviewName.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ConfigSubProjectSubstringPattern.PK_ValuationSubProjectSubstringPattern.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.DailyChartTracking.PK_ValuationDailyChartTracking.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.FilteredAuditCNCompletedChart.PK_ValuationFilteredAuditCNCompletedChart.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.FilteredAuditCWFDetail.PK_ValuationFilteredAuditCWFDetail .pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.RptPaymentDetail.PK_ValuationRptPaymentDetail .pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.RptRetrospectiveValuation.PK_ValuationRptRetrospectiveValuation.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.RptRetrospectiveValuationDetail.PK_ValuationRptRetrospectiveValuationDetail.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.RptSummaryTotal.PK_ValuationRptSummaryTotal.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.RptSummaryTotalUnique.PK_ValuationRptSummaryTotalUnique.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.RptTotal.PK_ValuationRptTotal.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ValCTRSummary.PK_ValuationValCTRSummary.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <None Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ConfigProjectIdList.PK_ValuationConfigProjectIdList.pkey.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Indexes\Valuation.CalcPartCSubProjectModelYearCI.IX_CalcPartCSubProjectModelYearCI__AutoProcessRunId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogConfigClientMain.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogConfigClientPlan.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogConfigProjectIdList.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogConfigStaticParameters.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogConfigSubProjectReviewName.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogConfigSubProjectSubstringPattern.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.LogConfigClientMain.PK_ValuationLogConfigClientMain.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.LogConfigClientPlan.PK_ValuationLogConfigClientPlan.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.LogConfigProjectIdList.PK_ValuationLogConfigProjectIdList.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.LogConfigStaticParameters.PK_ValuationLogConfigStaticParameters.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.LogConfigSubProjectReviewName.PK_ValuationLogConfigSubProjectReviewName.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.LogConfigSubProjectSubstringPattern.PK_ValuationLogConfigSubProjectSubstringPattern.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigClientMain.DF_LogConfigClientMain_Edited.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigClientMain.DF_LogConfigClientMain_EditedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigClientPlan.DF_LogConfigClientPlan_Edited.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigClientPlan.DF_LogConfigClientPlan_EditedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigStaticParameters.DF_LogConfigStaticParameters_Edited.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigStaticParameters.DF_LogConfigStaticParameters_EditedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigSubProjectReviewName.DF_LogConfigSubProjectReviewName_Edited.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigSubProjectReviewName.DF_LogConfigSubProjectReviewName_EditedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigSubProjectSubstringPattern.DF_LogConfigSubProjectSubstringPattern_Edited.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.LogConfigSubProjectSubstringPattern.DF_LogConfigSubProjectSubstringPattern_EditedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigClientMain.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigClientPlan.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigProjectIdList.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <None Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigStaticParameters.proc.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigSubProjectReviewName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigSubProjectSubstringPattern.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Triggers\ConfigClientMain.TR_ValuationConfigClientMain_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Triggers\ConfigClientPlan.TR_ValuationConfigClientPlan_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Triggers\ConfigProjectIdList.TR_ValuationConfigProjectIdList_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigUpdateConfigSubProjectReviewName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Triggers\ConfigSubProjectSubstringPattern.TR_ValuationConfigSubProjectSubstringPattern_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\lk_DCP_dates_RskAdj.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\ix_lk_DCP_dates_RskAdj_PayMonth_MOR_DCP.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\pk_lk_DCP_dates_RskAdj_ID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Indexes\Valuation.NewHCCPartC.IX_NewHCCPartC__ProcessRunId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Indexes\Valuation.NewHCCPartD.IX_NewHCCPartD__ProcessRunId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogRptSummaryTotal.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\LogRptSummaryTotalUnique.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Triggers\RptSummaryTotal.TR_ValuationRptSummaryTotal_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Triggers\RptSummaryTotalUnique.TR_ValuationRptSummaryTotalUnique_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.UpdateAutoProcessWorkList.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AutoProcess.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\LogAutoProcess.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\AutoProcess.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\LogAutoProcessAction.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\LogAutoProcessActionCatalog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\LogAutoProcessActionCatalogParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Triggers\AutoProcess.TR_AutoProcess_Log.trigger.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.UpdateAutoProcessWorkList.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RebuildIndexesByTable.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.CohortImport.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.lk_CohortTagDescription.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.tbl_Cohort.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_CohortImport.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CohortRegion.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\PK_CohortRegion.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_RAPS_DiagHCC_rollup_thrudate_diagcode.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\AutoGetProcessRunId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigGetFilteredAuditDetailWrapper.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigInsertConfigClientPlan.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\rev.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptPaymentDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptVisibleAutoProcessRun.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptTotal_PMH.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptTotal_PMH_Attestation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptTotal_Attestation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptSummaryTotal.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptPaymentDetail__TotalsDetail__Attestation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptPaymentDetail_PMH.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptSummaryTotalPriorYear.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptFailureReasonDetail__TotalsDetail__Attestation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptFailureReasonDetail_TotalsDetail_PMH.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptFailureReasonDetail__TotalsDetail__PMH_Attestation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptFilteredAuditSummary.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.spr_RptPaymentDetail_TotalDetail_PMH_Attestation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_MMR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_AltHICN.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_RAPS.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_RefreshPY.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_Activity.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_AltHICN.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_Log.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_MMR.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_RAPS.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_Activity.PK_tbl_Summary_RskAdj_Activity.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_AltHICN.PK_tbl_Summary_RskAdj_AltHICN.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_Log.PK_tbl_Summary_RskAdj_Log.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_MMR.PK_tbl_Summary_RskAdj_MMR.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_RAPS.PK_tbl_Summary_RskAdj_RAPS.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbo.CNClientBillingDetails.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\CNClientBillingDetails.pk_CNClientBillingDetails.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Intermediate_RAPSMORCombined.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Intermediate_RAPSMORCombined_INT.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Intermediate_RAPSMORCombined_INTRank.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_MOR.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_RAPS_Preliminary.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_RefreshPY.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Intermediate_RAPSMORCombined.PK_tbl_Intermediate_RAPSMORCombined.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Intermediate_RAPSMORCombined_INT.PK_tbl_Intermediate_RAPSMORCombined_INT.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Intermediate_RAPSMORCombined_INTRank.PK_tbl_Intermediate_RAPSMORCombined_INTRank.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_MOR.PK_tbl_Summary_RskAdj_MOR.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_RAPS_Preliminary.PK_tbl_Summary_RskAdj_RAPS_Preliminary.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_RefreshPY.PK_tbl_Summary_RskAdj_RefreshPY.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IX_tbl_Intermediate_RAPSMORCombined_01.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_RAPS_MOR_Combined.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_MOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Intermediate_RAPS_INTRank.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Intermediate_RAPS_INT.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Intermediate_RAPS.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Intermediate_RAPS.PK_tbl_Intermediate_RAPS.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Intermediate_RAPS_INTRank.PK_tbl_Intermediate_RAPS_INTRank.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Intermediate_RAPS_INT.PK_tbl_Intermediate_RAPS_INT.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\tbl_Intermediate_RAPS.IX_tbl_Intermediate_RAP_01.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\tbl_Intermediate_RAPS_INT.IX_tbl_Intermediate_RAPS_INT_01.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecevDemographics.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecevDetailPartCAllPlan.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecevDetailBuildupPartCAllPlan.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecevBuildup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecevRefreshPY.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.PK_EstRecevDetailPartCAllPlan.Pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EstRecevRefreshPY.PK_EstRecevRefreshPY.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EstRecevDemographics.PK_EstRecevDemographics.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EstRecevBuildup.PK_EstRecevBuildup.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EstRecevDetailBuildupPartCAllPlan.PK_EstRecevDetailBuildupPartCAllPlan.Pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevDemoCalc.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevHIERINT.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevMemberDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevMORCalc.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevRAPSCalc.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevRefreshPaymentYear.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_RAPS_MOR_Combined_2.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_RAPS_MOR_Combined.PK_tbl_Summary_RskAdj_RAPS_MOR_Combined.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.AutoProcessWorker.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptPaymentDetail_BlendedPaymentDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptRetrospectiveValuation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptSummaryTotalRecommendedBy.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptSummaryValuationDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcess.DF_AutoProcess_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessAction.DF_AutoProcessCatalog_PopulateParameter.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalog.DF_AutoProcessActionCatalog_Added.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalog.DF_AutoProcessActionCatalog_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalogParameter.DF_AutoProcessActionCatalogParameter_Nullable.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalogParameter.DF_AutoProcessActionCatalogParameter_Output.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcesssActionCatalog.DF_AutoProcessAction_CatalogPopulateParameter.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_Phase.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_PreRunSecs.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_Priority.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_Retry.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_StopAll.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_CN_CWFDetails.PK_CWFDetails.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\ERDeleteHCCOutput.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.ERDeleteHCCOutput.PK_ERDeleteHCCOutput.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcess.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessAction.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessActionCatalog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessActionCatalogParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessRunParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessWorkList.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.AutoProcess.PK_ValuationAutoProcess.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.AutoProcessAction.PK_AutoProcessAction.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.AutoProcessActionCatalog.PK_AutoProcessActionCatalog.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.AutoProcessActionCatalogParameter.PK_AutoProcessActionCatalogParameter.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.AutoProcessWorkList.PK_AutoProcessWorkList.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.ProcessRunParameter.PK_ProcessRunParameter.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.AutoProcessWorker.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptPaymentDetail_BlendedPaymentDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptRetrospectiveValuation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptSummaryTotalRecommendedBy.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.sprRptSummaryValuationDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcess.DF_AutoProcess_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessAction.DF_AutoProcessCatalog_PopulateParameter.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalog.DF_AutoProcessActionCatalog_Added.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalog.DF_AutoProcessActionCatalog_AddedBy.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalogParameter.DF_AutoProcessActionCatalogParameter_Nullable.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessActionCatalogParameter.DF_AutoProcessActionCatalogParameter_Output.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcesssActionCatalog.DF_AutoProcessAction_CatalogPopulateParameter.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_Phase.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_PreRunSecs.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_Priority.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_Retry.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Constraints\Valuation.AutoProcessWorkList.DF_AutoProcessWorkList_StopAll.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_CN_CWFDetails.PK_CWFDetails.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\ERDeleteHCCOutput.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.ERDeleteHCCOutput.PK_ERDeleteHCCOutput.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_EstRecv_Delete_HCC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.ConfigLoadAutoProcessWorkList.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\Valuation.UpdateEDateAutoProcessRun.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_EstRecv_Delete_HCC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.EDS_DiagHCC_rollup.IDX_EDS_DiagHCC_rollup_HICN_PatientControlNumber.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.EDS_DiagHCC_rollup.IDX_EDS_DiagHCC_rollup_HICN_ThruDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.EDS_DiagHCC_rollup.IDX_EDS_DiagHCC_rollup_thrudate_diagcode.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.EDSNewHCCPartC.IX_EDSNewHCCPartC__ProcessRunId.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.tbl_EstRecv_EDS_DiagHCC_RskMod.IDXNC_tbl_EstRecv_EDS_DiagHCC_RskMod.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.tbl_Summary_RskAdj_EDS.IX_tbl_Summary_RskAdj_EDS_Alternative02.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EDS_DiagHCC_rollup.PK_EDS_DiagHCC_rollup.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EDSNewHCCPartC.PK_EDSNewHCCPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_EstRecv_EDS_DiagHCC_RskMod.PK_tbl_EstRecv_EDS_DiagHCC_RskMod.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_EstRecv_EDS_Interactions.PK_tbl_EstRecv_EDS_Interactions.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_Summary_RskAdj_EDS.PK_tbl_Summary_RskAdj_EDS.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EDS_DiagHCC_rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EDSNewHCCPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_EstRecv_EDS_DiagHCC_RskMod.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_EstRecv_EDS_Interactions.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_Summary_RskAdj_EDS.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.spr_Summary_RskAdj_EDS.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.spr_EstRecv_EDS_New_HCC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\Keys\Valuation.NewHCCPartC.PK_ValuationNewHCCPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_Config.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_Summary_RskAdj_Config.PK_tbl_Summary_RskAdj_Config.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_Summarize_Base_Tables.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_LoadStats.PK_tbl_Summary_RskAdj_LoadStats.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_LoadStats.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Storage\Partition Functions\pfn_PYMYST.partitionfunction.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Storage\Partition Schemes\pscheme_PYMYST.partitionscheme.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvDemoCalc.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvDemographics.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvDetailPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.RiskScoreFactorsPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.RiskScoresPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\etl.EstRecvDemographics.Pk_Etl_EstRecvDemographics.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\etl.EstRecvDetailPartC.PK_etl_EstRecvDetailPartCID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\etl.RiskScoreFactorsPartC.PK_etl_RiskScoreFactorsPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\etl.RiskScoresPartC.PK_etl_RiskScoresPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecvDetailPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.RiskScoreFactorsPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.RiskScoresPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.EstRecvDetailPartC.PK_rev_EstRecvDetailPartCID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.RiskScoreFactorsPartC.PK_rev_RiskScoreFactorsPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.RiskScoresPartC.PK_rev_RiskScoresPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvPartitionKey.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\etl.EstRecvPartitionKey.PK_etl_EstRecvPartitionKey.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.EstRecvDetailPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.RiskScoreFactorsPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.RiskScoresPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\hst.EstRecvDetailPartC.PK_hst_EstRecvDetailPartCID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\hst.RiskScoreFactorsPartC.PK_hst_RiskScoreFactorsPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\hst.RiskScoresPartC.PK_hst_RiskScoresPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out\Tables\out.EstRecvDetailPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out\Tables\out.RiskScoreFactorsPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out\Tables\out.RiskScoresPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\out.EstRecvDetailPartC.PK_out_EstRecvDetailPartCID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\out.RiskScoreFactorsPartC.PK_out_RiskScoreFactorsPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\out.RiskScoresPartC.PK_out_RiskScoresPartC.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\hst.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\out.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_RAPS_Preliminary.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_EDS_Preliminary.PK_tbl_Summary_RskAdj_EDS_Preliminary.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_EDS_Preliminary.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_EDS_Preliminary.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\Valuation\Tables\AutoProcessActiveWorkList.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevDeleteHCCLoad.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecvDetailPartCExtract.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IX_tbl_Intermediate_EDS_01.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IX_tbl_Intermediate_EDS_INT_01.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_Intermediate_EDS.PK_tbl_Intermediate_EDS.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_Intermediate_EDS_INT.PK_tbl_Intermediate_EDS_INT.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\rev.tbl_Intermediate_EDS_INTRank.PK_tbl_Intermediate_EDS_INTRank.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_Intermediate_EDS.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_Intermediate_EDS_INT.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_Intermediate_EDS_INTRank.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_MOR_Rollup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_MOR_Rollup.PK_tblMOR_Rollup.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\PartCNewHCCOutputDParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\PartCNewHCCOutputMParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\PartCNewHCCOutputSParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PartCNewHCCOutputDParameter.PK_PartCNewHCCOutputDParameter_PartCNewHCCOutputDParameterID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PartCNewHCCOutputMParameter.PK_PartCNewHCCOutputMParameter_PartCNewHCCOutputMParameterID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PartCNewHCCOutputSParameter.PK_PartCNewHCCOutputSParameter_PartCNewHCCOutputSParameterID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperLoadPartCNewHCCOutputMParameter.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevEDSCalc.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\rpt.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\EstRecvSummaryPartC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\EstRecvSummaryPartCByPBP.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\EstRecvSummaryPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\EstRecvSummaryPartC.PK_EstRecvSummaryPartC_EstRecvSummaryPartCID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\EstRecvSummaryPartC.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\EstRecvSummaryPartC.PK_EstRecvSummaryPartC_EstRecvSummaryPartCID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperLoadEstRecvSummaryPartC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadEstRecvSummaryPartC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Extract.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ExtractDelivery.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ExtractFile.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ExtractRequest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ExtractRequestFile.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ExtractRequestParameter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\Extract.PK_Extract_ExtractID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\ExtractDelivery.PK_ExtractDelivery_ExtractDeliveryID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\ExtractFile.PK_ExtractFile_ExtractFileID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\ExtractRequest.PK_ExtractRequest_ExtractRequestID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\ExtractRequestFile.PK_ExtractRequestFile_ExtractRequestFileID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\ExtractRequestParameter.PK_ExtractRequestParameter_ExtractRequestParameterID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\ref.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\ref\Tables\ExtractStatus.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\ref\Tables\Keys\ExtractStatus.PK_ExtractStatus_ExtractStatusID.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\ExtractViewThrough.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\ExtractViewEstimatedReceivableDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ExtractRequestLoad.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\dbo.ExtractEstRecvDetailPartC.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_MORD_rollup.PK_tblMORD_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\Converted_MORD_Data_rollup.PK_Converted_MORD_Data_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.SummaryPartDRskAdjEDS.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.SummaryPartDRskAdjMORD.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.SummaryPartDRskAdjRAPSMORDCombined.sql" />
+    <Build Include="Schema Objects\Database Level Objects\Storage\Partition Functions\pfn_SummPY.partitionfunction.sql" />
+    <Build Include="Schema Objects\Database Level Objects\Storage\Partition Schemes\pscheme_SummPY.partitionscheme.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PKetlSummaryPartDRskAdjEDS.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PKetlSummaryPartDRskAdjMORD.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PKetlSummaryPartDRskAdjRAPSMORDCombined.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.SummaryPartDRskAdjEDS.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.SummaryPartDRskAdjMORD.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.SummaryPartDRskAdjRAPSMORDCombined.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\hst.PKhstSummaryPartDRskAdjEDS.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\hst.PKhstSummaryPartDRskAdjMORD.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\hst.PKhstSummaryPartDRskAdjRAPSMORDCombined.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\out.SummaryPartDRskAdjEDS.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\out.SummaryPartDRskAdjMORD.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\out.SummaryPartDRskAdjRAPSMORDCombined.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PKoutSummaryPartDRskAdjEDS.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PKoutSummaryPartDRskAdjMORD.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PKoutSummaryPartDRskAdjRAPSMORDCombined.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.SummaryPartDRskAdjEDS.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.SummaryPartDRskAdjMORD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.SummaryPartDRskAdjRAPSMORDCombined.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PKrevSummaryPartDRskAdjEDS.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PKrevSummaryPartDRskAdjMORD.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PKrevSummaryPartDRskAdjRAPSMORDCombined.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\SummaryPartDRskAdjEDSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\SummaryPartDRskAdjRAPS.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\SummaryPartDRskAdjRAPSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\SummaryPartDRskAdjEDSPreliminary.PK_SummaryPartDRskAdjEDSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\SummaryPartDRskAdjRAPS.PK_SummaryPartDRskAdjRAPSIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\SummaryPartDRskAdjRAPSPreliminary.PK_SummaryPartDRskAdjRAPSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\SummaryPartDRskAdjEDSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\SummaryPartDRskAdjRAPS.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\SummaryPartDRskAdjRAPSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\SummaryPartDRskAdjEDSPreliminary.PK_SummaryPartDRskAdjEDSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\SummaryPartDRskAdjRAPS.PK_SummaryPartDRskAdjRAPSIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\SummaryPartDRskAdjRAPSPreliminary.PK_SummaryPartDRskAdjRAPSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\SummaryPartDRskAdjEDSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\SummaryPartDRskAdjRAPS.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\SummaryPartDRskAdjRAPSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\SummaryPartDRskAdjEDSPreliminary.PK_SummaryPartDRskAdjEDSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\SummaryPartDRskAdjRAPS.PK_SummaryPartDRskAdjRAPSIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\SummaryPartDRskAdjRAPSPreliminary.PK_SummaryPartDRskAdjRAPSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\SummaryPartDRskAdjEDSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\SummaryPartDRskAdjRAPS.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\SummaryPartDRskAdjRAPSPreliminary.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\SummaryPartDRskAdjEDSPreliminary.PK_SummaryPartDRskAdjEDSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\SummaryPartDRskAdjRAPS.PK_SummaryPartDRskAdjRAPSIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\SummaryPartDRskAdjRAPSPreliminary.PK_SummaryPartDRskAdjRAPSPreliminaryIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRskAdjEDSPreliminary.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRskAdjRAPSPreliminary.proc.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvDemoCalcPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvDemographicsPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.EstRecvDetailPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.RiskScoreFactorsPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.RiskScoresPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PketEstRecvDemoCalcPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PketlEstRecvDemographicsPartD.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PKetlEstRecvDetailPartD.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PketlRiskScoreFactorsPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PketlRiskScoresPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.EstRecvDetailPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.RiskScoreFactorsPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\hst.RiskScoresPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PKhstEstRecvDetailPartD.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PkhstRiskScoreFactorsPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PkhstRiskScoresPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\out.EstRecvDetailPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\out.RiskScoreFactorsPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\out.RiskScoresPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PKoutEstRecvDetailPartD.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PkoutRiskScoreFactorsPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PkoutRiskScoresPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.EstRecvDetailPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.RiskScoreFactorsPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.RiskScoresPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PKrevEstRecvDetailPartD.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PkrevRiskScoreFactorsPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRskAdjMORD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRskAdjRAPS.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\IntermediateEDSPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\IntermediateEDSPartD.PK_IntermediateEDSPartD.pkey..sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRskAdjEDS.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PkrevRiskScoresPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstReceivablesandRiskScoresPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevDELHIERPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevDemoCalcPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevEDSCalcPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevERCalcPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevMemberDetailPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevMORCalcPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevRAPSCalcPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevRiskScoreCalcPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRskAdjRAPSMORDCombined.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\PartDNewHCCOutputMParameter.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PartDNewHCCOutputMParameter.PK_PartDNewHCCOutputMParameterIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\PartDNewHCCOutputMParameter.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PartDNewHCCOutputMParameter.PK_PartDNewHCCOutputMParameterIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\PartDNewHCCOutputMParameter.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PartDNewHCCOutputMParameter.PartDNewHCCOutputMParameterIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\PartDNewHCCOutputMParameter.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PartDNewHCCOutputMParameter.PK_PartDNewHCCOutputMParameterIDAndPaymentYear.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperLoadPartDNewHCCOutputMParameter.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.SummaryProcessRunFlag.sql" />
+    <None Include="Scripts\Post-Deployment\69584_PDScriptSummaryRunFlagInsert.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperSummaryRskAdjBootUp.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDRAPSNewHCC.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryPartDEDSNewHCC.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\SummaryRskAdjRefreshRunflag.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperSummaryRskAdjPartC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperSummaryAltHICNMMR.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.WrapperSummaryRskAdjPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecvPartDDeleteHCC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_SummaryProcessRunFlag.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecvPartDDeleteHCC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecvDetailPartDExtract.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\EstRecvSummaryPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\EstRecvSummaryPartD.PK_revEstRecvSummaryPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\EstRecvSummaryPartD.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\EstRecvSummaryPartD.PK_etlEstRecvSummaryPartDID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\rpt.EstRecvSummaryPartD.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\rpt.EstRecvSummaryPartDByPBP.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadEstRecvSummaryPartD.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\WrapperLoadEstRecvSummaryPartD.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\rpt.ExtractViewEstRecvPartDDetail.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ExtractEstRecvDetailPartD.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\ExtractViewPartDNewHCCEDSAndRAPS.proc.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ExtractPartDNewHCCEDSAndRAPS.proc.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\PartDNewHCCOutputDParameter.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PartDNewHCCOutputDParameter.PK_PartDNewHCCOutputDParameterID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\GetPartDDeleteHCCOutput.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\GetPartDNewHCCOutputForRE.proc.sql" />
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\ssnri.schema.sql" />
+    <Build Include="Schema Objects\Schemas\ssnri\Programmability\Functions\fnValidateMBI.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\Converted_MOR_Data_rollup.PK_Converted_MOR_Data_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_AltHICN_rollup.PK_tbl_AltHICN_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Member_Months_rollup.PK_tbl_Member_Months_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_MMR_rollup.PK_tbl_MMR_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\MOR2012_rollup.PK_MOR2012_rollup.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\tbl_Summary_RskAdj_EDS_MOR_Combined.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\tbl_Summary_RskAdj_EDS_MOR_Combined.PK_tbl_Summary_RskAdj_EDS_MOR_CombinedID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_EDS_MOR_Combined.proc.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\PartCNewHCCRAPSEDSReconciliation.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PartCNewHCCRAPSEDSReconciliation.PK_PartCNewHCCRAPSEDSReconciliationID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\PartCNewHCCRAPSEDSReconciliation.table.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PartCNewHCCRAPSEDSReconciliation.PK_PartCNewHCCRAPSEDSReconciliationID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\PartCNewHCCRAPSEDSReconciliation.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PartCNewHCCRAPSEDSReconciliation.PK_PartCNewHCCRAPSEDSReconciliationID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\PartCNewHCCRAPSEDSReconciliation.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PartCNewHCCRAPSEDSReconciliation.PK_PartCNewHCCRAPSEDSReconciliationID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadPartCNewHCCRAPSEDSReconciliation.proc.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Raps_Detail_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_RAPS_Detail_rollup.PK_tbl_RAPS_Detail_rollup_tbl_RAPS_Detail_rollupID.pkey.sql" />
+    <None Include="Scripts\Pre-Deployment\TFS_73202_JIrwin_Truncate_tbl_Plan_Claims_rollup.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\PartCNewHCCRAPSEDSReconciliation.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\ExtractViewPartCNewHCCRAPSEDSReconciliation.proc.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ExtractPartCHCCRAPSEDSReconciliation.proc.sql" />
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\raps.schema.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\raps.RAPSClaimsReconciliationSummary.table.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\Keys\RAPSClaimsReconciliationSummary.PK_RAPSClaimsReconciliationSummary.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_RAPS_Detail_rollup_PlanIdentifier_Claim_ID.index.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\IDX_RAPSLoadClaimsReconciliationDetail_Plan_ID_Claim_ID_INC.index.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\RAPSLoadClaimsReconciliationDetail.table.sql" />
+    <None Include="Scripts\Pre-Deployment\TFS_73563_JIrwin_Delete_ExtractFile.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\RAPSLoadClaimsReconciliationDetail.PK_RAPSLoadClaimsReconciliationDetail.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Plan_Claims_Validation_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Plan_Claims_Validation_rollup.PK_tbl_Plan_Claims_Validation_rollup_tbl_Plan_Claims_Validation_rollupID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_Plan_Claims_Validation_rollup_PlanIdentifier_Claim_ID.index.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\tbl_Plan_Claims_rollup_ImportFileName.index.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\RAPSLoadClaimsReconciliationExtractDetail.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\RAPSLoadClaimsReconciliationExtractDetail.PK_RAPSLoadClaimsReconciliationExtractDetail.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\IDX_RAPSLoadClaimsReconciliationExtractDetail_Plan_ID_Claim_ID_INC.index.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\RAPSLoadClaimsReconciliationExtractDetailDupeGrouped.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\RAPSLoadClaimsReconciliationExtractDetailDupeGrouped.PK_RAPSLoadClaimsReconciliationExtractDetailDupeGrouped.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\RAPSLoadClaimsReconciliationExtractDetailDupeNotGrouped.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\RAPSLoadClaimsReconciliationExtractDetailDupeNotGrouped.PK_RAPSLoadClaimsReconciliationExtractDetailDupeNotGrouped.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures\sprRAPSClaimsReconciliationExtractRequest.proc.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures\sprRAPSClaimsReconciliationSummary.proc.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\raps.RAPSFileSubmissionSummary.table.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\Keys\RAPSFileSubmissionSummary.PK_RAPSFileSubmissionSummary.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures\sprRAPSFileSubmissionSummary.proc.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_RAPS_Detail_rollup_OutboundFileID.index.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_EstRecv_RAPS_New_HCC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.tbl_Summary_RskAdj_MMR.IX_tbl_Summary_RskAdj_MMR_PY.index.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevHistoryLoadPartC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_Summary_RskAdj_EDS_Source.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_rev_RskAdj_EDS_Source.PKey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_EDS_Source.proc.sql" />
+    <None Include="Scripts\Pre-Deployment\TFS_76272_JIrwin_Truncate_RAPLoadClaimsReconciliationExtractDetail.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RAPS_Detail_Import_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RAPS_Detail_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RAPS_Detail_rollup.PK_RAPS_Detail_rollup_RAPS_Detail_rollupID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RAPS_Detail_Import_rollup.PK_RAPS_Detail_Import_rollup_RAPS_Detail_Import_rollupID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\raps.QRAPSReconciliationSummary.table.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\Keys\QRAPSReconciliationSummary.PK_QRAPSReconciliationSummary.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RAPS_Detail_Import_Failed_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RAPS_Detail_Import_Failed_rolllup.PK_RAPS_Detail_Import_Failed_rolllup_RAPS_Detail_Import_Failed_rolllupID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_EDS_Source.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\ix_tbl_RskAdj_EDS_Source_SrvEnddate.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures\sprQRAPSReconciliationSummary.proc.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\rev.tbl_Summary_RskAdj_EDS_Source.table.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_rev_RskAdj_EDS_Source.PKey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\spr_Summary_RskAdj_EDS_Source.proc.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\PartCNewHCCOutputMParameter.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PartCNewHCCOutputMParameter.PK_PartCNewHCCOutputMParameter.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadPartCNewHCCOutputMParameterHistory.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\raps.CNRAPSReconciliationSummary.table.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Tables\Keys\CNRAPSReconciliationSummary.PK_CNRAPSReconciliationSummary.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CNRAPSImportDetail_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\CNRAPSImportDetail_rollup.PK_CNRAPSImportDetail_rollup_CNRAPSImportDetail_rollupID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures\sprCNRAPSReconciliationSummary.proc.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\ix_Etl_tbl_Summary_RskAdj_EDS_Preliminary_HICN.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_Etl_tbl_Summary_RskAdj_EDS_Preliminary.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Etl.tbl_Summary_RskAdj_EDS_Preliminary.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Out.tbl_Summary_RskAdj_EDS_Preliminary.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PK_Out_tbl_Summary_RskAdj_EDS_Preliminary.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Indexes\ix_Out_tbl_Summary_RskAdj_EDS_Preliminary_HICN.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Etl.IntermediateEDSAltHicn.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\ix_IntermediateEDSAltHicn_Year.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_ETL_IntermediateEDSAltHicn.pkey.sql" />
+    <None Include="Scripts\Post-Deployment\76879_PDScript_SummaryProcessRunflag.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.EstRecevHistoryLoadPartD.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Out.PartCNewHCCOutputMParameter.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PK_PartCNewHCCOutputMParameter.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\ix_tbl_Summary_RskAdj_EDS_Preliminary_HICN.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\QRAPSReconciliationExtractDetail.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\QRAPSReconciliationExtractDetail.PK_QRAPSReconciliationExtractDetail.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\raps\Programmability\Stored Procedures\sprQRAPSReconciliationExtractRequest.proc.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Etl.IntermediateEDSAltHicnPartD.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\ix_IntermediateEDSAltHicnPartD_Year.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_ETL_IntermediateEDSAltHicnPartD.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Out.tbl_Summary_RskAdj_RAPS.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PK_Out_tbl_Summary_RskAdj_RAPS.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Out.tbl_Summary_RskAdj_MOR.table.sql" />
+    <Build Include="Schema Objects\Schemas\out\Tables\Keys\PK_Out_tbl_Summary_RskAdj_MOR.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_EstRecv_New_HCC.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\tbl_Summary_RskAdj_Log.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\tbl_Summary_RskAdj_Log.PK_tbl_Summary_RskAdj_Log_ID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_RAPS_Detail_rollup_RAPS_Detail_ID_PlanIdentifier_RollupLoad.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_RAPS_Detail_rollup_tbl_RAPS_Detail_ID_PlanIdentifier_RollupLoad.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbo_tbl_RAPS_Detail_rollup_Sync_RAPSStatusID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_Insert_dbo_RAPS_Detail_rollup.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_Insert_dbo_tbl_RAPS_Detail_rollup.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\IntermediateRAPSNewHCCOutput.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\IntermediateEDSNewHCCOutput.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_rev_IntermediateRAPSNewHCCOutput.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_rev_IntermediateEDSNewHCCOutput.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\IX_IntermediateRAPSNewHCCOutput_.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\IX_IntermediateEDSNewHCCOutput.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\rev.tbl_Summary_RskAdj_MMR.IX_tbl_Summary_RskAdj_MMR_PY.index.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\EstRecevHistoryLoadPartC.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_RAPS_Detail_rollup_PlanIdentifier_tbl_RAPS_Detail_rollupID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_Insert_dbo_tbl_Plan_Claims_rollup.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spr_dbo_tbl_Plan_Claims_rollup_Sync_ClaimstatusID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_tbl_Plan_Claims_rollup_PlanIdentifier_tbl_plan_claims_RollupID.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_tbl_Summary_RskAdj_MMR_RskAdjAgeGrp.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_Converted_MORD_Data_rollup_HICN_Plan_PyMnth.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_tbl_Summary_RskAdj_MMR_PymntYr_PlanID_PBP.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\RAPS_RETURN_rollup.PK_RAPS_RETURN_rollup_RAPS_RETURN_rollupID.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RAPS_RETURN_rollup.table.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.SummaryIntermediatePartDRskAdjEDSPreliminary.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.RAPSIntermediateForPartD.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.SummaryIntermediatePartDRskAdjRAPSPreliminary.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.tbl_Intermediate_Summary_RskAdj_EDS_Preliminary.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.tbl_Intermediate_RskAdj_RAPS_Preliminary.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_SummaryIntermediatePartDRskAdjEDSPreliminaryID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_RAPSIntermediateForPartDID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_SummaryIntermediatePartDRskAdjRAPSPreliminaryID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_tbl_Intermediate_Summary_RskAdj_EDS_PreliminaryID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_tbl_Intermediate_RskAdj_RAPS_PreliminaryID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\etl.tbl_RAPSEDS_HCCDetails.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_tbl_RAPSEDS_HCCDetails_HCCDetailID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\IDX_tbl_RAPSEDS_HCCDetails_PaymentYear_HICN.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\sprHCCMemberDetail.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\HistoryRskadjActivity.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_HistoryRskadjActivity.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryRskAdj_EDS_MORCombinedHistory.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryRskAdj_RAPS_MORCombinedHistory.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\tbl_Summary_RskAdj_EDS_MOR_Combined.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PK_tbl_Summary_RskAdj_EDS_MOR_CombinedID.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\tbl_Summary_RskAdj_RAPS_MOR_Combined.sql" />
+    <Build Include="Schema Objects\Schemas\hst\Tables\Keys\PK_tbl_Summary_RskAdj_RAPS_MOR_Combined.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\EstRecvRskadjActivity.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_EstRecvRskadjActivity_EstRecvRskadjActivityID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\SubmissionBalancingDetail.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\SubmissionBalancingDetail.PK_SubmissionBalancingDetail.pkey.sql.sql" />
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\[Valuation].[sprRptPaymentDetail BlendedPaymentDetailPartC].sql" />
+    <Build Include="Schema Objects\Schemas\Valuation\Programmability\Stored Procedures\[Valuation].[sprRptPaymentDetail BlendedPaymentDetailPartD].sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\IntermediatePartDRAPSAltHicn.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_IntermediateRAPSAltHicn_AltHICNRAPSID.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_tbl_Summary_RskAdj_AltHICN_PlanID_HICN.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Indexes\IDX_IntermediatePartDRAPSAltHicn_HICN_ThruDatePlusone.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\IntermediatePartDRAPSNewHCCOutput.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_rev_IntermediatePartDRAPSNewHCCOutputID.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\IntermediatePartDEDSNewHCCOutput.sql" />
+    <Build Include="Schema Objects\Schemas\etl\Tables\Keys\PK_rev_IntermediatePartDEDSNewHCCOutputID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CWFD_SubProjectMedicalRecords.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\PK_CWFD_SubProjectMedicalRecords.pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CWFD_Proj_SubProj.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\IDX_CWFD_Proj_SubProj_Subproject.index.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\NewHCCActivity.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_NewHCCActivity.Pkey.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\dbo.CWFDetails.IX_CWFDetails_CWFDClusterKey.index.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_SummaryRskAdjMORSourcePartC_HICN_HCC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_SummaryRskAdjMORSourcePartD_HICN_HCC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_rev_SummaryRskAdjMORSourcePartC_ConvertedMORID.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_rev_SummaryRskAdjMORSourcePartD_ConvertedMORID.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\SummaryRskAdjMORSourcePartC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\SummaryRskAdjMORSourcePartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\IntermediarySupplemental.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\IntermediarySupplementalEncounter.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_rev_IntermediarySupplemental_ID.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_rev_IntermediarySupplementalEncounter_ID.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_IntermediarySupplemental_ServiceEndDate.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_IntermediarySupplementalEncounter_EncounterICN.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\ProjectSubproject.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Indexes\IDX_ProjectSubproject_RetroYear.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Tables\Keys\PK_ProjectSubproject_ID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\NPI_Info.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryRskAdjMORSourcePartC.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryRskAdjMORSourcePartD.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadIntermediarySuppEncounterEDSData.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadIntermediarySupplementalEDSData.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadSummaryEDSSource.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadValuationPartCEDS.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\LoadValuationPartDEDS.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Views\RiskAdjustmentDashboard.view.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\NPIImage_Info.sql" />
+    <Build Include="Schema Objects\Schemas\rev\Programmability\Stored Procedures\rev.LoadSummaryEDSSourceUpdates.sql" />
+    <Build Include="Schema Objects\Schemas\rpt\Programmability\Stored Procedures\rpt.HCCMemberCountbyConditions.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\RollupMinMaxValues.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\PK_RollupMinMaxValues_ID.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbo.ReportingReconPopulation.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\dbo.ReportingReconPopulationMissing.table.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Indexes\dbo.ReportingReconPopulation.IX_ReportingReconPopulation_DiagnosisID.index.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Release.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ClientDB_Report.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="..\DacPacs\HRPReporting.dacpac">
+      <HintPath>..\DacPacs\HRPReporting.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>HRPReporting</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="HRPInternalReportsDB">
+      <DefaultValue>HRPInternalReports</DefaultValue>
+      <Value>$(SqlCmdVar__7)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="HRPReporting">
+      <DefaultValue>HRPReporting</DefaultValue>
+      <Value>$(SqlCmdVar__8)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HRPInternalReports\HRPInternalReports.sqlproj">
+      <Name>HRPInternalReports</Name>
+      <Project>{93e9b0a1-8224-4759-a899-51be8f91fd50}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>HRPInternalReportsDB</DatabaseSqlCmdVariable>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

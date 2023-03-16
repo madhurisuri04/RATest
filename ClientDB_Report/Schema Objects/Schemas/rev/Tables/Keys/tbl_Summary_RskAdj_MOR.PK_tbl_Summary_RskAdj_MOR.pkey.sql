@@ -1,0 +1,6 @@
+ALTER TABLE [rev].[tbl_Summary_RskAdj_MOR] ADD  CONSTRAINT PK_tbl_Summary_RskAdj_MOR PRIMARY KEY CLUSTERED 
+(
+[tbl_Summary_RskAdj_MORId]  ASC, [PaymentYear] ASC
+)WITH (PAD_INDEX  = ON, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = ON, IGNORE_DUP_KEY = OFF
+, ONLINE = ON, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON ) 
+ON [pscheme_SummPY](PaymentYear);

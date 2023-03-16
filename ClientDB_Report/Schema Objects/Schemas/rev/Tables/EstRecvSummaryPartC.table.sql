@@ -1,0 +1,28 @@
+CREATE TABLE rev.EstRecvSummaryPartC
+(
+	EstRecvSummaryPartCID BIGINT IDENTITY(1,1) NOT NULL,
+	PaymentYear INT NOT NULL,
+	MYUFlag CHAR(1) NOT NULL,
+	PBP VARCHAR(10) NULL,
+	Members INT NULL,
+	MemberMonths INT NULL,
+	MonthsInDCP INT NULL,
+	EstimatedReceivable DECIMAL(16,4) NULL,
+	EstimatedReceivableAfterDelete DECIMAL(16,4) NULL,
+	AmountDeleted DECIMAL(16,4) NULL,
+	TotalPremiumYTD DECIMAL(20,3) NULL,
+	RAFactorType VARCHAR(5) NULL,
+	LastPaymentMonth SMALLDATETIME NULL,
+	AgedStatus VARCHAR(15) NULL,
+	DBPlanID VARCHAR(5) NULL,
+	RAPSProjectedRiskScore DECIMAL(10,3) NULL,
+	EDSProjectedRiskScore DECIMAL(10,3) NULL,
+	ProjectedRiskScore DECIMAL(10,3) NULL,
+	RAPSProjectedRiskScoreAfterDelete DECIMAL(10,3) NULL,
+	EDSProjectedRiskScoreAfterDelete DECIMAL(10,3) NULL,
+	ProjectedRiskScoreAfterDelete DECIMAL(10,3) NULL,
+	CurrentScore DECIMAL(10,3) NULL,
+	LoadDate DATETIME NOT NULL,
+	UserID VARCHAR(128) NOT NULL,
+	Category VARCHAR(30) NULL
+)

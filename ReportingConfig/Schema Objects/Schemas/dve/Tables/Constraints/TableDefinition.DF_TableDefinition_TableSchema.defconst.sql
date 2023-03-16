@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dve].[TableDefinition] ADD  CONSTRAINT [DF_TableDefinition_TableSchema]  DEFAULT (N'dbo') FOR [TableSchema]

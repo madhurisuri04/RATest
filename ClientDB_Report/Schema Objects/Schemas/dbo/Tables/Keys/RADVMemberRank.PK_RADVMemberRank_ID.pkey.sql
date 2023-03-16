@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[RADVMemberRank]
+	ADD CONSTRAINT [PK_RADVMemberRank]
+	PRIMARY KEY (ID)

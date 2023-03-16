@@ -1,0 +1,1 @@
+﻿ALTER TABLE [edt].[Rule] ADD  CONSTRAINT [DF_Rule_isActive]  DEFAULT ((1)) FOR [isActive]

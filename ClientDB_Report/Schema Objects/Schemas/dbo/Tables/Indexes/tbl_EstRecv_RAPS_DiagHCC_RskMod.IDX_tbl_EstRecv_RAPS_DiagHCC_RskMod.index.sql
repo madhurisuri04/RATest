@@ -1,0 +1,1 @@
+﻿Create clustered index IDX_tbl_EstRecv_RAPS_DiagHCC_RskMod ON dbo.tbl_EstRecv_RAPS_DiagHCC_RskMod (RAPS_DiagHCC_rollupID)

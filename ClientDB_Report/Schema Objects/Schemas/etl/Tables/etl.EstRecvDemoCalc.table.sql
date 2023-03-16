@@ -1,0 +1,37 @@
+CREATE TABLE [etl].[EstRecvDemoCalc]
+    (
+      [ID] BIGINT IDENTITY(1, 1)
+                                 NOT NULL ,
+      [PlanID] [INT] NULL ,
+      [HICN] [VARCHAR](12) NULL ,
+      [PaymentYear] [VARCHAR](4) NOT NULL ,
+      [MYUFlag] [VARCHAR](1) NOT NULL ,
+      [PaymStart] [DATETIME] NULL ,
+      [DateForFactors] VARCHAR(30) NULL ,      
+      [RskAdjAgeGrp] [CHAR](4) NULL ,
+      [Gender] [CHAR](1) NULL ,
+      [MABID] [MONEY] NULL ,
+      [SCC] [VARCHAR](10) NULL ,
+      [PartCRAFTProjected] [CHAR](2) NULL ,
+      [PartCRAFTMMR] [CHAR](2) NULL ,
+      [MaxMOR] [VARCHAR](8) NULL ,      
+      [MARiskRevenueRecalc] [DECIMAL](20, 3) NULL ,
+      [MARiskRevenueVariance][DECIMAL](20, 3) NULL , 
+      [RiskScoreCalculated] [DECIMAL](10, 3) NULL ,
+      [RiskScoreMMR] [DECIMAL](10, 3) NULL ,
+      [RSDifference] [DECIMAL](19, 4) NULL ,
+      [EstimatedRecvAmount] [DECIMAL](12, 4) DEFAULT 0 ,
+      [NewEnrolleeFlagError] [VARCHAR](2) NULL ,
+      [ProjectedRiskScore] [DECIMAL](10, 3) NULL ,
+      [ActualFinalPaid] [DECIMAL](20, 3) NULL ,
+      [EstimatedRecvAmountAfterDelete] [DECIMAL](12, 4) DEFAULT 0 ,
+      [AmountDeleted] [DECIMAL](12, 4) DEFAULT 0 ,
+      [RiskScoreNewAfterDelete] [DECIMAL](10, 3) NULL ,
+      [DifferenceAfterDelete] [DECIMAL](19, 4) NULL ,
+      [ProjectedRiskScoreAfterDelete] [DECIMAL](10, 3) NULL ,
+      [AgedStatus] VARCHAR(10) NULL ,
+      [SourceType] VARCHAR (5) NULL ,
+      [PartitionKey] INT NOT NULL,
+      [Populated] DATETIME NULL
+    )
+         

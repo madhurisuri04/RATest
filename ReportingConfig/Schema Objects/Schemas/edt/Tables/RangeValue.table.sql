@@ -1,0 +1,11 @@
+﻿CREATE TABLE [edt].[RangeValue](
+	[ID] [bigint] IDENTITY(-9223372036854775808,1) NOT NULL,
+	[RangeID] [int] NOT NULL,
+	[ValueEntity] [int] NULL,
+	[ValueEntityQualifier] [int] NULL,
+	[Value] [varchar](1024) NULL,
+ CONSTRAINT [PK_RangeValue] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]

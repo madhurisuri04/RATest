@@ -1,0 +1,10 @@
+
+ALTER TABLE [rev].[tbl_EstRecv_EDS_Interactions]
+ADD CONSTRAINT [IDX_tbl_EstRecv_EDS_Interactions]
+    PRIMARY KEY CLUSTERED
+    (
+        [HICN]
+      , [RAFT]
+      , [HCC])
+    WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF
+        , ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON )

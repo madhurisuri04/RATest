@@ -1,0 +1,10 @@
+CREATE TABLE etl.RAPSLoadClaimsReconciliationExtractDetailDupeNotGrouped (
+	ID					BIGINT IDENTITY (1,1) NOT NULL
+	,Claim_ID			INT NULL
+	,Plan_ID			VARCHAR(5) NULL
+	,RAPSStatusID		TINYINT NULL
+	,OutboundFileID		VARCHAR(10) NULL
+	,Date_Exported		SMALLDATETIME NULL
+	,EXPORTED_FILEID	VARCHAR(10) NULL
+	,LineOfBusiness	    VARCHAR(100) NULL
+)

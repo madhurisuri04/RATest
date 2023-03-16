@@ -1,0 +1,4 @@
+﻿ALTER TABLE [dbo].[tbl_Summary_RskAdj_Log] ADD  CONSTRAINT [PK_tbl_Summary_RskAdj_Log_ID] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = ON, FILLFACTOR = 100 )

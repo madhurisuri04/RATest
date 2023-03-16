@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dve].[TableQualifier] ADD  CONSTRAINT [DF_TableQualifier_Name]  DEFAULT ('default') FOR [Name]

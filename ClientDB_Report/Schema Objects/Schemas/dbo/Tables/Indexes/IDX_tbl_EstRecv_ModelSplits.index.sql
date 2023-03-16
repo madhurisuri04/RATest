@@ -1,0 +1,1 @@
+CREATE CLUSTERED INDEX IDX_tbl_EstRecv_ModelSplits on tbl_EstRecv_ModelSplits (PaymentYear)

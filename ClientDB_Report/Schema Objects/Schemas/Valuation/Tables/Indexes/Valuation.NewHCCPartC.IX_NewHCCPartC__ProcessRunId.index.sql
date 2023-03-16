@@ -1,0 +1,1 @@
+﻿CREATE NONCLUSTERED INDEX IX_NewHCCPartC__ProcessRunId ON [Valuation].[NewHCCPartC] ( [HCC_PROCESSED_PCN], [ProcessRunId] ) INCLUDE ([NewHCCPartCId], [PCN_SubprojectId], [FailureReason])  

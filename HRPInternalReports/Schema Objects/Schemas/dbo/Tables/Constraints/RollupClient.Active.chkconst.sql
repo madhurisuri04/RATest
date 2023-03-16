@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dbo].[RollupClient] ADD  DEFAULT ((1)) FOR [Active]

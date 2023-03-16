@@ -1,0 +1,1 @@
+﻿ALTER TABLE [edt].[Edit] ADD  CONSTRAINT [DF_Edit_Or]  DEFAULT ((0)) FOR [TrueOnANYCondition]

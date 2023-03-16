@@ -1,0 +1,1 @@
+	CREATE CLUSTERED INDEX IDX_tbl_EstRecv_ThruDate_SeqNum on tbl_EstRecv_ThruDate_SeqNum (PlanID, HICN)

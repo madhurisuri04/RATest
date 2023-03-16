@@ -1,0 +1,1 @@
+	CREATE CLUSTERED INDEX IDX_tbl_EstRecv_Processby_RAPS_IDs on tbl_EstRecv_Processby_RAPS_IDs (PlanID)

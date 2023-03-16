@@ -1,0 +1,1 @@
+﻿Create Nonclustered Index [IDX_tbl_PDE_rollup_HICN] On dbo.tbl_PDE_rollup (HICN Asc)

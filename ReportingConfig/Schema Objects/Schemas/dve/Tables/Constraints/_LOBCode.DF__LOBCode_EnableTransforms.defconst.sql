@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dve].[_LOBCode] ADD  CONSTRAINT [DF__LOBCode_EnableTransforms]  DEFAULT ((1)) FOR [EnableTransforms]

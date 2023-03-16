@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Risk.Reporting.DatabaseSHRT</id>
+    <version>$version$</version>
+    <title>Risk.Reporting.DatabaseSHRT</title>
+    <authors>Cotiviti RQI</authors>
+    <owners>Cotiviti RQI</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Risk.Reporting.DatabaseSHRT</description>
+    <releaseNotes>No release notes</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>No tags</tags>   
+  </metadata>  
+  <files>
+      <file src="ClientDB_Report\sql\Release\**\*.*" target="ClientDB_Report"/>
+  </files> 
+</package>

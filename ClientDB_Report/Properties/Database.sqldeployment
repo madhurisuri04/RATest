@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeploymentConfigurationSettings xmlns="urn:Microsoft.VisualStudio.Data.Schema.Package.DeploymentConfigurationSettings">
+  <Version>1.0</Version>
+  <Properties>
+    <AbortOnFirstError>False</AbortOnFirstError>
+    <AlwaysCreateNewDatabase>False</AlwaysCreateNewDatabase>
+    <BlockIncrementalDeploymentIfDataLoss>False</BlockIncrementalDeploymentIfDataLoss>
+    <CommentOutSetVarDeclarations>False</CommentOutSetVarDeclarations>
+    <DeployDatabaseProperties>False</DeployDatabaseProperties>
+    <DeploymentCollationPreference>UseSourceModelCollation</DeploymentCollationPreference>
+    <DoNotUseAlterAssemblyStatementsToUpdateCLRTypes>True</DoNotUseAlterAssemblyStatementsToUpdateCLRTypes>
+    <GenerateDropsIfNotInProject>False</GenerateDropsIfNotInProject>
+    <IgnoreAnsiNulls>True</IgnoreAnsiNulls>
+    <IgnoreAuthorizer>True</IgnoreAuthorizer>
+    <IgnoreColumnCollation>True</IgnoreColumnCollation>
+    <IgnoreColumnOrder>True</IgnoreColumnOrder>
+    <IgnoreComments>True</IgnoreComments>
+    <IgnoreExtendedProperties>True</IgnoreExtendedProperties>
+    <IgnoreNotForReplication>True</IgnoreNotForReplication>
+    <IgnorePermissions>True</IgnorePermissions>
+    <IgnoreRoleMembership>True</IgnoreRoleMembership>
+    <IgnoreTableOptions>False</IgnoreTableOptions>
+    <IgnoreUserSettingsObjects>True</IgnoreUserSettingsObjects>
+    <PerformDatabaseBackup>False</PerformDatabaseBackup>
+    <ScriptDatabaseCollation>True</ScriptDatabaseCollation>
+    <SingleUserMode>False</SingleUserMode>
+    <VerifyDeployment>False</VerifyDeployment>
+  </Properties>
+</DeploymentConfigurationSettings>

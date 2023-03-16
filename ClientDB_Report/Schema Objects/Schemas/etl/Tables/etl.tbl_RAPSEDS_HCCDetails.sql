@@ -1,0 +1,28 @@
+    CREATE TABLE [etl].[tbl_RAPSEDS_HCCDetails]
+    (
+		ID [bigint] IDENTITY(1,1) NOT NULL,
+        PaymentYear INT  NULL,
+        PlanID VARCHAR(5) NULL,
+        HICN VARCHAR(15) NULL,
+        RAFactorType CHAR(2)  NULL,
+        HCC VARCHAR(20) NULL,
+        HCCProcessedPCN VARCHAR(50) NULL,
+        AnnualizedEstimatedValue MONEY NULL,
+        ProcessedPriorityProcessedByDate DATETIME NULL,
+        ProcessedPriorityThruDate DATETIME NULL,
+        ProcessedPriorityDiag VARCHAR(20) NULL,
+        ProcessedPriorityFileID VARCHAR(18) NULL,
+        ProcessedPriorityRAC CHAR(1) NULL,
+        ProcessedPriorityRAPSSourceID VARCHAR(50) NULL,
+        EncounterSource VARCHAR(20) NULL,
+        Source VARCHAR(20) NULL,
+        ProcessedPriorityICN BIGINT NULL,
+        ProcessedPriorityEncounterID BIGINT NULL,
+        ProcessedPriorityReplacementEncounterSwitch CHAR(1) NULL,
+        ProcessedPriorityClaimID VARCHAR(50) NULL,
+        ProcessedPrioritySecondaryClaimID VARCHAR(50) NULL,
+        ProcessedPriorityRecordID VARCHAR(80) NULL,
+        ProcessedPriorityVendorID VARCHAR(100) NULL,
+        HCCPre VARCHAR(50) NULL,
+        ModelYear INT  NULL
+    );

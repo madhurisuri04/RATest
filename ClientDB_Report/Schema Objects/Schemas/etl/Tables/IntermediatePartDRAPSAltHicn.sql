@@ -1,0 +1,25 @@
+CREATE TABLE [etl].[IntermediatePartDRAPSAltHicn]
+(
+	AltHICNRAPSID INT IDENTITY(1,1) NOT NULL,
+	RAPSDiagHCCRollupID INT NOT NULL,
+	PlanIdentifier SMALLINT NOT NULL,
+	RAPSID INT NOT NULL,
+	ProcessedBy SMALLDATETIME NOT NULL,
+	DiagnosisCode VARCHAR(7) NULL,
+	FileID VARCHAR(18) NULL,
+	FromDate SMALLDATETIME NULL,
+	HICN VARCHAR(12) NULL,
+	PatientControlNumber VARCHAR(40) NULL,
+	ProviderType CHAR(2) NULL,
+	SeqNumber VARCHAR(7) NULL,
+	ThruDate SMALLDATETIME NULL,
+	VoidIndicator BIT NULL,
+	VoidedbyRAPSID INT NULL,
+	Accepted BIT NULL,
+	Deleted CHAR(1) NULL,
+	SourceId INT NULL,
+	ProviderId VARCHAR(40) NULL,
+	RAC CHAR(1) NULL,
+	RACError VARCHAR(3) NULL,
+	ThrudatePlusone INT NULL
+);

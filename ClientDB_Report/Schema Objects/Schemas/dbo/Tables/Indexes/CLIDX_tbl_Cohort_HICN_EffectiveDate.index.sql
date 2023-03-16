@@ -1,0 +1,1 @@
+CREATE CLUSTERED INDEX [CLIDX_tbl_Cohort_HICN_EffectiveDate] ON dbo.tbl_Cohort (HICN ASC, EffectiveDate ASC);

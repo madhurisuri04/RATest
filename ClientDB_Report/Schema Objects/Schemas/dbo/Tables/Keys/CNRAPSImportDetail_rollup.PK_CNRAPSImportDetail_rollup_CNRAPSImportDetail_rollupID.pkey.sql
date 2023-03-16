@@ -1,0 +1,4 @@
+ALTER TABLE [dbo].[CNRAPSImportDetail_rollup] ADD CONSTRAINT [PK_CNRAPSImportDetail_rollup_CNRAPSImportDetail_rollupID] PRIMARY KEY CLUSTERED 
+(
+	[CNRAPSImportDetail_rollupID] ASC
+) WITH (PAD_INDEX = ON, FILLFACTOR = 100) ON [PRIMARY]

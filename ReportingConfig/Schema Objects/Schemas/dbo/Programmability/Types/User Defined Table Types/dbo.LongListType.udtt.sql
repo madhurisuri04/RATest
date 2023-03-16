@@ -1,0 +1,4 @@
+﻿CREATE TYPE [dbo].[LongListType] AS TABLE 
+(
+	[Value] BIGINT NOT NULL PRIMARY KEY
+);

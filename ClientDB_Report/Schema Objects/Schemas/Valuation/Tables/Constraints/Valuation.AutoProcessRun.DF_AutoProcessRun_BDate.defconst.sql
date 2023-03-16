@@ -1,0 +1,1 @@
+﻿ALTER TABLE Valuation.AutoProcessRun ADD  CONSTRAINT [DF_AutoProcessRun_BDate] DEFAULT (GETDATE()) FOR [BDate]

@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dbo].[RollupTable] ADD  DEFAULT (getdate()) FOR [ModifiedDate]

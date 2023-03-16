@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dve].[Entity] ADD  CONSTRAINT [DF_Entity_ModifiedDT]  DEFAULT (getdate()) FOR [ModifiedDT]

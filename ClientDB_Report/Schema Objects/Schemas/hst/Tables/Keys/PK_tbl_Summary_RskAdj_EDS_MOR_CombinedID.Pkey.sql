@@ -1,0 +1,6 @@
+﻿ALTER TABLE [hst].[tbl_Summary_RskAdj_EDS_MOR_Combined]
+ADD CONSTRAINT [PK_tbl_Summary_RskAdj_EDS_MOR_CombinedID_H]
+    PRIMARY KEY CLUSTERED ([tbl_Summary_RskAdj_EDS_MOR_CombinedID] ASC)
+    WITH (FILLFACTOR = 100, ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF,
+          STATISTICS_NORECOMPUTE = OFF
+         );

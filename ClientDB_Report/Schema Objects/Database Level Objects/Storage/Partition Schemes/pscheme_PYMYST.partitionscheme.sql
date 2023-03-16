@@ -1,0 +1,2 @@
+CREATE PARTITION SCHEME [pscheme_PYMYST] AS PARTITION [pfn_PYMYST] TO ([Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary],[Primary])
+GO

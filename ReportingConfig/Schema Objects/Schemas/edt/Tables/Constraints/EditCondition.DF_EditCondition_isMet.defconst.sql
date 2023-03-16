@@ -1,0 +1,1 @@
+﻿ALTER TABLE [edt].[EditCondition] ADD  CONSTRAINT [DF_EditCondition_isMet]  DEFAULT ((1)) FOR [isMet]

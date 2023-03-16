@@ -1,0 +1,1 @@
+﻿ALTER TABLE [edt].[Condition] ADD  CONSTRAINT [DF_Condition_ModifiedDT]  DEFAULT (getdate()) FOR [ModifiedDT]

@@ -1,0 +1,1 @@
+﻿ALTER TABLE Valuation.LogConfigClientPlan ADD  CONSTRAINT [DF_LogConfigClientPlan_Edited]  DEFAULT (GETDATE()) FOR [Edited]

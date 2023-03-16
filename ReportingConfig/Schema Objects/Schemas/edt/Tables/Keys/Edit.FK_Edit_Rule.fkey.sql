@@ -1,0 +1,2 @@
+﻿ALTER TABLE [edt].[Edit]  WITH CHECK ADD  CONSTRAINT [FK_Edit_Rule] FOREIGN KEY([RuleID])
+REFERENCES [edt].[Rule] ([ID])

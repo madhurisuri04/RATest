@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dbo].[RollupTableConfig] ADD  DEFAULT ((0)) FOR [DynamicRollup]

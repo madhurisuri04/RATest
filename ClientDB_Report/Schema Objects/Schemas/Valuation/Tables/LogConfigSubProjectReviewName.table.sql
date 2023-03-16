@@ -1,0 +1,28 @@
+﻿CREATE TABLE [Valuation].[LogConfigSubProjectReviewName] (
+    [LogConfigSubProjectReviewNameId] [INT] IDENTITY(1, 1) NOT NULL
+  , [Action] [CHAR](1) NULL
+  , [SubProjectReviewNameId] [INT] NULL
+  , [ClientId] [INT] NULL
+  , [ClientId_old] [INT] NULL
+  , [ProjectId] [INT] NULL
+  , [ProjectId_old] [INT] NULL
+  , [SubProjectId] [INT] NULL
+  , [SubProjectId_old] [INT] NULL
+  , [ReviewName] [VARCHAR](50) NULL
+  , [ReviewName_old] [VARCHAR](50) NULL
+  , [ActiveBDate] [DATE] NULL
+  , [ActiveBDate_old] [DATE] NULL
+  , [ActiveEDate] [DATE] NULL
+  , [ActiveEDate_old] [DATE] NULL
+  , [Added] [DATETIME] NULL
+  , [Added_old] [DATETIME] NULL
+  , [AddedBy] [VARCHAR](257) NULL
+  , [AddedBy_old] [VARCHAR](257) NULL
+  , [Reviewed] [DATETIME] NULL
+  , [Reviewed_old] [DATETIME] NULL
+  , [ReviewedBy] [VARCHAR](257) NULL
+  , [ReviewedBy_old] [VARCHAR](257) NULL
+  , [Edited] [DATETIME] NULL
+  , [EditedBy] [VARCHAR](257) NULL
+  , [SubGroup] VARCHAR(128) NULL
+  , [SubGroup_old] VARCHAR(128) NULL)

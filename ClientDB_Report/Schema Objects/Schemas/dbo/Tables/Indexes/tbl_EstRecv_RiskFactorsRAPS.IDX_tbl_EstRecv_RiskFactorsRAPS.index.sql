@@ -1,0 +1,1 @@
+﻿	CREATE CLUSTERED INDEX IDX_tbl_EstRecv_RiskFactorsRAPS on tbl_EstRecv_RiskFactorsRAPS(PlanID, HICN,PaymStart,Model_year)	

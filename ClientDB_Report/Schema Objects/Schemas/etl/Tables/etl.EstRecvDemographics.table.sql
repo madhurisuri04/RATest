@@ -1,0 +1,45 @@
+CREATE TABLE [etl].[EstRecvDemographics]
+    (
+      [ID] BIGINT IDENTITY(1, 1)
+                                     NOT NULL ,              
+      [PlanID] [INT] NULL ,
+      [HICN] [VARCHAR](12) NULL ,
+      [PaymentYear] INT NOT NULL ,
+      [MYUFlag] [VARCHAR](1) NOT NULL ,
+      [PaymStart] [DATETIME] NULL ,
+      [MonthRow] INT NULL,   
+      [DateForFactors] DATETIME NULL,
+      [Gender] INT NULL ,
+      [RskAdjAgeGrp] [CHAR](4) NULL ,
+      [AgeGrpID] INT NULL ,
+      [PartCRAFTProjected] [CHAR](2) NULL ,
+      [PartCRAFTMMR] [CHAR](2) NULL ,
+      [PartCDefaultIndicator] [CHAR](1) NULL ,
+      [ORECRestated] INT NULL ,
+      [MedicaidRestated] [VARCHAR](4) NULL ,
+      [PartCRiskScoreMMR] [DECIMAL](19, 4) NULL ,
+      [SCC] [VARCHAR](10) NULL ,
+      [OOA] [CHAR](1) NULL ,
+      [PBP] [VARCHAR](6) NULL ,
+      [MABID] [MONEY] NULL ,
+      [HOSP] [CHAR](1) NULL ,
+      [ISARUsed] VARCHAR(1) NULL ,
+      [MonthsInLaggedDCP] [INT] NULL ,
+      [MonthsInDCP] [INT] NULL ,
+      [TotalPayment] [MONEY] NULL ,
+      [TotalMAPaymentAmount] [MONEY] NULL ,
+      [ESRD] [CHAR](1) NULL ,
+      [MARiskRevenue_A_B] [DECIMAL](20, 3) NULL ,
+      [TotalPremiumYTD] [DECIMAL](20, 3) NULL ,     
+      [MidYearUpdateFlag] [VARCHAR](1) NULL,
+      [MidYearUpdateActual] [DECIMAL](20, 3) NULL,
+      [MedicaidDualStatusCode] [VARCHAR](2) NULL ,
+      [Aged] [INT] NULL ,
+      [BeneficiaryCurrentMedicaidStatus] [CHAR](1) NULL,
+      [SourceType] [VARCHAR](4) NULL ,
+      [PartitionKey] INT NOT NULL,
+      [Populated]DATETIME NULL
+    )
+  
+
+----DROP TABLE [etl].[EstRecvDemographics]

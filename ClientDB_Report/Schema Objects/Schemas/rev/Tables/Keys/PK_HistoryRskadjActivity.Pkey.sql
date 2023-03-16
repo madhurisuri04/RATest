@@ -1,0 +1,5 @@
+﻿ALTER TABLE [rev].[HistoryRskadjActivity] ADD CONSTRAINT [PK_HistoryRskadjActivity_HistoryRskadjActivityID] PRIMARY KEY CLUSTERED 
+(
+[HistoryRskadjActivityID] ASC
+)WITH (PAD_INDEX = ON, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ONLINE = ON, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON ) 
+ 

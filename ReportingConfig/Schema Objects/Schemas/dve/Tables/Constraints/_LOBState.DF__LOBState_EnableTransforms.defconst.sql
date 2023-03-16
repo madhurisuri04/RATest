@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dve].[_LOBState] ADD  CONSTRAINT [DF__LOBState_EnableTransforms]  DEFAULT ((1)) FOR [EnableTransforms]

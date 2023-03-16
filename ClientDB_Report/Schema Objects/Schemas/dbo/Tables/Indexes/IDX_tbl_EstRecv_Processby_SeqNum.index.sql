@@ -1,0 +1,1 @@
+	CREATE CLUSTERED INDEX IDX_tbl_EstRecv_Processby_SeqNum on tbl_EstRecv_Processby_SeqNum (PlanID, HICN)

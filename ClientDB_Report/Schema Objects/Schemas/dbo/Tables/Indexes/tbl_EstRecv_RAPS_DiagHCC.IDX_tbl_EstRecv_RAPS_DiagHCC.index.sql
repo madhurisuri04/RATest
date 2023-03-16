@@ -1,0 +1,1 @@
+﻿Create clustered index IDX_tbl_EstRecv_RAPS_DiagHCC ON dbo.tbl_EstRecv_RAPS_DiagHCC (Payment_year,RAFT,DiagnosisCode)

@@ -1,0 +1,1 @@
+﻿ALTER TABLE [rev].[tbl_Summary_RskAdj_LoadStats] ADD CONSTRAINT [PK_tbl_Summary_RskAdj_LoadStats] PRIMARY KEY CLUSTERED (tbl_Summary_RskAdj_LoadStatsId ASC)

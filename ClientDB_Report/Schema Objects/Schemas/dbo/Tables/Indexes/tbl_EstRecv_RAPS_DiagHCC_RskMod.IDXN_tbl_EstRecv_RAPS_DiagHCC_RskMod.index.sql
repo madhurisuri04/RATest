@@ -1,0 +1,1 @@
+﻿Create nonclustered index IDXNC_tbl_EstRecv_RAPS_DiagHCC_RskMod ON dbo.tbl_EstRecv_RAPS_DiagHCC_RskMod (HICN, RAFT, HCC, HCC_Number, deleted, Payment_Year)

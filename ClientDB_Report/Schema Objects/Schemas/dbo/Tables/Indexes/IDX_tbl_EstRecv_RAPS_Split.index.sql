@@ -1,0 +1,1 @@
+	CREATE CLUSTERED INDEX IDX_tbl_EstRecv_RAPS_Split on tbl_EstRecv_RAPS_Split(PlanID, HICN,RAFT,HCC_Number, Model_Year)

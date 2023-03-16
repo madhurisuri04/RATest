@@ -1,0 +1,1 @@
+﻿ALTER TABLE [dbo].[RollupTableStatusIndexBuildHistory] ADD  DEFAULT (getdate()) FOR [HistoryModifiedDate]

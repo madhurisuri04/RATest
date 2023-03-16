@@ -1,0 +1,15 @@
+CREATE NONCLUSTERED INDEX [ix_lk_DCP_dates_RskAdj_PayMonth_MOR_DCP] 
+ON [dbo].[lk_DCP_dates_RskAdj] (
+	[PayMonth] ASC
+	,[MOR_DCP] ASC
+	)
+	WITH (
+			PAD_INDEX = OFF
+			,STATISTICS_NORECOMPUTE = OFF
+			,SORT_IN_TEMPDB = OFF
+			,IGNORE_DUP_KEY = OFF
+			,DROP_EXISTING = OFF
+			,ONLINE = OFF
+			,ALLOW_ROW_LOCKS = ON
+			,ALLOW_PAGE_LOCKS = ON
+			)

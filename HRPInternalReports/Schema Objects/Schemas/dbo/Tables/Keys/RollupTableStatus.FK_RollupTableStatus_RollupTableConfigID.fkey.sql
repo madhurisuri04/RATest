@@ -1,0 +1,2 @@
+﻿ALTER TABLE [dbo].[RollupTableStatus]  WITH CHECK ADD  CONSTRAINT [FK_RollupTableStatus_RollupTableConfigID] FOREIGN KEY([RollupTableConfigID])
+REFERENCES [dbo].[RollupTableConfig] ([RollupTableConfigID])
